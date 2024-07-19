@@ -7,8 +7,14 @@ public class ProjetoFinal {
         double salarioBruto, salarioLiquido, inss, impostoRenda;
         System.out.println("Digite o salário de 5 funcionários a seguir.");
         for (int i=0; i<salarios.length;i++) {
-            System.out.print("Digite o "+(i+1)+"º salário: ");
-            salarios[i] = scanner.nextDouble();
+            do {
+                System.out.print("Digite o "+(i+1)+"º salário: ");
+                salarios[i] = scanner.nextDouble();
+                if (salarios[i] <= 0) {
+                    System.out.println("Salário inválido. Tente novamente!");
+                }
+            } while (salarios[i] <= 0);
+
         }
         for (int i=0;i<5;i++) {
             salarioBruto = salarios[i];
