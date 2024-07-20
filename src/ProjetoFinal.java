@@ -14,7 +14,6 @@ public class ProjetoFinal {
                     System.out.println("Salário inválido. Tente novamente!");
                 }
             } while (salarios[i] <= 0);
-
         }
         for (int i=0;i<5;i++) {
             salarioBruto = salarios[i];
@@ -28,6 +27,7 @@ public class ProjetoFinal {
             System.out.printf("Pagou R$ %.2f de imposto de renda. \n",impostoRenda);
             System.out.printf("Salário líquido: R$ %.2f \n", salarioLiquido);
         }
+        scanner.close();
     }
     private static double calcularInss(double salario) {
         if (salario <= 1212.00) {
